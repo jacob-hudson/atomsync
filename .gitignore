@@ -1,0 +1,9 @@
+packages/*
+!packages/package-sync
+storage
+compile-cache
+dev
+.npm
+.node-gyp
+.apm
+atom-shell

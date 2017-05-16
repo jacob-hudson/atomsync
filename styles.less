@@ -1,0 +1,117 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+// git colors
+// @git-added-color: green;
+// @git-modified-color: purple;
+// @git-removed-color: red;
+
+// style the background color of the tree view
+.tree-view {
+    background-color: #268bd2;
+    font-size: 20px;
+    font-weight: bolder;
+
+    // .list-tree li.status-added,
+    // .list-tree li.status-added > .list-item {
+    //     color: @git-added-color;
+    // }
+    //
+    // .list-tree li.status-modified,
+    // .list-tree li.status-modified > .list-item {
+    //     color: @git-modified-color;
+    // }
+    //
+    // .list-tree li.status-removed,
+    // .list-tree li.status-removed > .list-item {
+    //     color: @git-removed-color;
+    // }
+
+    .list-tree li.status-ignored,
+    .list-tree li.status-ignored > .list-item {
+        display: none;
+    }
+}
+@font-size: 16px;
+@color: white;
+
+.tab-bar .tab .status-bar,
+body,
+html {
+    font-size: @font-size;
+    font-weight: bolder;
+    color: @color;
+}
+// style the background and foreground colors on the atom-text-editor-element itself
+
+atom-text-editor {
+    background-color: #002b36;
+    font-weight: bolder;
+}
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor.editor .cursor {
+    border-color: orange;
+    box-shadow: inset 24px 0 0 orange;
+}
+
+atom-text-editor.editor .syntax--comment {
+    color: black;
+    background-color: white;
+}
+
+atom-text-editor.editor .invisible-character {
+    color: violet;
+    font-weight: bolder;
+}
+
+.settings-view {
+    font-size: 18px;
+}
+
+.line-number.cursor-line-no-selection {
+    background-color: blue;
+}
+//indent lines
+.indent-guide-improved {
+    background-color: white;
+
+    &.indent-guide-stack {
+        background-color: magenta;
+
+        &.indent-guide-active {
+            background-color: cyan;
+            font-weight: bolder;
+        }
+    }
+}
+// active pane
+.pane {
+    .gutter,
+    ul.tab-bar {
+        opacity: 0.4;
+    }
+}
+
+.pane.active {
+    .gutter {
+        opacity: 1;
+    }
+
+    ul.tab-bar {
+        opacity: 1;
+
+        .tab.active {
+            color: yellow;
+            background-color: blue;
+            text-decoration: italic;
+            font-weight: bolder;
+        }
+    }
+}
